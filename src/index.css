@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ztartverse Custom Styles */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-ztart-dark via-slate-900 to-ztart-dark;
+    @apply text-white antialiased;
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-ztart-primary to-ztart-secondary;
+    @apply text-white font-semibold py-2 px-4 rounded-lg;
+    @apply hover:opacity-90 transition-opacity;
+    @apply shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-ztart-accent text-white font-semibold py-2 px-4 rounded-lg;
+    @apply hover:opacity-90 transition-opacity;
+  }
+  
+  .card {
+    @apply bg-white/10 backdrop-blur-md rounded-xl p-6;
+    @apply border border-white/20 shadow-xl;
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-xl rounded-2xl;
+    @apply border border-white/10 shadow-2xl;
+  }
+}
